@@ -12,9 +12,23 @@
 
 
     <script type="text/javaScript">
-        // 创建构造器
+        // 创建构造器  //可全局构造组件
         var Profile = Vue.extend({
-            template: template
+            template: '<p>{{my}}{{name}}{{is}}{{peter}}</p>',
+            data:()=>{
+                return{
+                    my:'我的',
+                    name:'名字',
+                    is:'是',
+                    peter:'彼得',
+                }
+            }
+        })
+
+        // 挂载vue
+        var app = new Vue({
+            el:"#app",
+
         })
     </script>
 </body>
